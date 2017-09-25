@@ -1,6 +1,4 @@
 {% from "docker/map.jinja" import docker with context %}
-
-
 # Docker Upstart and SysVinit configuration file
 
 #
@@ -21,7 +19,6 @@
 
 # This is also a handy place to tweak where Docker's temporary files go.
 #export DOCKER_TMPDIR="/mnt/bigdrive/docker-tmp"
-
 {% for line in docker.get("config", []) %}
 {{ line }}
 {% endfor %}
